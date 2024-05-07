@@ -209,6 +209,19 @@
           }
         }
       },
+      "NSwag.Annotations/14.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NSwag.Annotations.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NSwag.Annotations.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -867,6 +880,22 @@
         "runtimes/win/native/mongocrypt.dll"
       ]
     },
+    "NSwag.Annotations/14.0.7": {
+      "sha512": "eSuuWtX9rb40LPl4srrw4u1KUdc5uKAoTDbQE4wVl1sjx6ErVAjkFEkFiuzb5cE2jvvXI5OrsH1s83mB74KyUA==",
+      "type": "package",
+      "path": "nswag.annotations/14.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NuGetIcon.png",
+        "lib/net462/NSwag.Annotations.dll",
+        "lib/net462/NSwag.Annotations.xml",
+        "lib/netstandard2.0/NSwag.Annotations.dll",
+        "lib/netstandard2.0/NSwag.Annotations.xml",
+        "nswag.annotations.14.0.7.nupkg.sha512",
+        "nswag.annotations.nuspec"
+      ]
+    },
     "SharpCompress/0.30.1": {
       "sha512": "XqD4TpfyYGa7QTPzaGlMVbcecKnXy4YmYLDWrU+JIj7IuRNl7DH2END+Ll7ekWIY8o3dAMWLFDE1xdhfIWD1nw==",
       "type": "package",
@@ -1194,6 +1223,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "MongoDB.Driver >= 2.25.0",
+      "NSwag.Annotations >= 14.0.7",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -1244,6 +1274,10 @@
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[2.25.0, )"
+          },
+          "NSwag.Annotations": {
+            "target": "Package",
+            "version": "[14.0.7, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

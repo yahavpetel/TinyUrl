@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VnxVNT92D0lxScfbk5A3Fa79JjptJz0icKX1Xsr7OO/K0YMklCPTLQJIhhgrgAEQRqjeQJ3oZLSEbQycKwi+Sw==",
+  "dgSpecHash": "S0AK8f19NQpm+iQKMTGSEQla7ZH1fRo9Q5tSzHrCYyt6DjPZEH5y/Z1Dm1XyXEAA5qgzLn8JdgEzXiUWgDsvqg==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\source\\repos\\TinyUrl\\TinyUrl\\TinyUrl.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\USER\\.nuget\\packages\\mongodb.driver\\2.25.0\\mongodb.driver.2.25.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\mongodb.driver.core\\2.25.0\\mongodb.driver.core.2.25.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\mongodb.libmongocrypt\\1.8.2\\mongodb.libmongocrypt.1.8.2.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\nswag.annotations\\14.0.7\\nswag.annotations.14.0.7.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\snappier\\1.0.0\\snappier.1.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",

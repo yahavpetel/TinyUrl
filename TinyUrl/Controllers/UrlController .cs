@@ -2,36 +2,60 @@
 using TinyUrl.Services;
 
 
-namespace TinyUrl.Controllers
+
+[ApiController]
+[Route("[controller]")]
+public class UrlController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class UrlController : ControllerBase
+    private readonly IUrlShortenerService _urlShortenerService;
+
+    public UrlController(IUrlShortenerService urlShortenerService)
     {
-        private readonly IUrlShortenerService _urlShortenerService;
+        _urlShortenerService = urlShortenerService;
+    }
 
-        public UrlController(IUrlShortenerService urlShortenerService)
+    [HttpPost("ShortenUrl")]
+    public async Task<IActionResult> ShortenUrl(string longUrl)
+    {
+        if (string.IsNullOrEmpty(longUrl))
         {
-            _urlShortenerService = urlShortenerService;
+            return BadRequest("The 'longUrl' parameter cannot be null or empty.");
         }
 
-        [HttpPost]
-        public IActionResult ShortenUrl([FromBody] string longUrl)
+        try
         {
-            string shortUrl = _urlShortenerService.GetShortenUrl(longUrl);
-            return Ok(shortUrl);
+            string shortUrl = await _urlShortenerService.GetShortenUrl(longUrl);
+            return Ok(new { url = shortUrl });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, "An error occurred while shortening the URL.");
+        }
+    }
+
+    [HttpGet("{shortUrl}")]
+    public async Task<IActionResult> RedirectUrl(string shortUrl)
+    {
+        if (string.IsNullOrEmpty(shortUrl))
+        {
+            return BadRequest("The 'shortUrl' parameter cannot be null or empty.");
         }
 
-
-
-        [HttpGet("{shortUrl}")]
-        public IActionResult RedirectUrl(string shortUrl)
+        try
         {
-            string longUrl = _urlShortenerService.GetLongUrl(shortUrl);
+            string? longUrl = await _urlShortenerService.GetLongUrl(shortUrl);
             if (longUrl == null)
+            {
                 return NotFound();
+            }
 
             return Redirect(longUrl);
         }
+        catch (Exception ex)
+        {
+            return StatusCode(500, "An error occurred while redirecting.");
+        }
     }
 }
+
+

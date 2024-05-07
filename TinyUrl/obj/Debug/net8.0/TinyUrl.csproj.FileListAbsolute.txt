@@ -48,3 +48,4 @@ C:\Users\USER\source\repos\TinyUrl\TinyUrl\bin\Debug\net8.0\ZstdSharp.dll
 C:\Users\USER\source\repos\TinyUrl\TinyUrl\bin\Debug\net8.0\runtimes\linux\native\libmongocrypt.so
 C:\Users\USER\source\repos\TinyUrl\TinyUrl\bin\Debug\net8.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\USER\source\repos\TinyUrl\TinyUrl\bin\Debug\net8.0\runtimes\win\native\mongocrypt.dll
+C:\Users\USER\source\repos\TinyUrl\TinyUrl\bin\Debug\net8.0\NSwag.Annotations.dll
